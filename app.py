@@ -8,13 +8,13 @@ st.markdown("### Atul Sehwag | 2 Offers Done | Now Open for Freelancing ₹800+"
 
 day = st.sidebar.selectbox("Choose Day", [f"Day {i}" for i in range(1, 31)])
 
-day_number = day.split()[1]                  
-img_path = f"Day{day_number}_FINAL.png"      # Day1_FINAL.png, Day10_FINAL.png
+# TERE PNGs ka exact naam → DAY1_FINAL.png (capital DAY)
+img_path = f"DAY{day.split()[1]}_FINAL.png"     # ← YE WAALA LINE SABSE IMPORTANT HAI
 
 if os.path.exists(img_path):
     st.image(img_path, use_column_width=True)
 else:
-    st.error(f"Oops! {img_path} missing hai bhai – check kar le GitHub pe hai ya nahi")
+    st.error(f"Missing → {img_path}")
 
 st.markdown("---")
 st.markdown("### Custom Dashboard Chahiye?")
